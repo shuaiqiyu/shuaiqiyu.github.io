@@ -3,11 +3,11 @@
   <title>Nice&#39;s Blog</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://shuaiqiyu.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2021-03-19T07:22:28.755Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://shuaiqiyu.github.io/"/>
+  <updated>2021-03-22T08:46:18.139Z</updated>
+  <id>https://shuaiqiyu.github.io/</id>
   
   <author>
     <name>Nice</name>
@@ -17,9 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo的搭建</title>
+    <link href="https://shuaiqiyu.github.io/2021/03/22/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    <id>https://shuaiqiyu.github.io/2021/03/22/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</id>
+    <published>2021-03-22T06:49:53.000Z</published>
+    <updated>2021-03-22T08:46:18.139Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>一直想搭建一个属于自己的博客，在市面上的各种blog框架中挑来挑去，最终选择了Hexo。<br>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入<a href="https://hexo.io/">Hexo</a>官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p><h2 id="Hexo搭建步骤"><a href="#Hexo搭建步骤" class="headerlink" title="Hexo搭建步骤"></a>Hexo搭建步骤</h2><p>因为我没有一点前端基础，所以在搭建的过程中基本都是参考网上的教程，期间也踩了很多坑，最终也是成功部署了Hexo<br>Hexo的整部署流程包括以下几点：<br>1.安装Git<br>2.安装Node.js<br>3.安装Hexo<br>4.将Hexo部署到GitHub<br>5.Hexo的一些常见配置说明</p><h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1.安装Git"></a>1.安装Git</h3><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。<br>Windows：到git官网上下载,<a href="https://gitforwindows.org/">点击这里</a>，下载后会有一个Git Bash的命令行工具，以后就用这个工具来使用git。<br>Linux:用一句命令就可以在Linux中安装Git</p><figure class="highlight plain"><figcaption><span>git</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure><p>使用命令<code>git --version</code>可以查看版本<br><img src="https://img.imgdb.cn/item/605843b98322e6675c73bef6.png"></p><h3 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2.安装Node.js"></a>2.安装Node.js</h3><p>Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。<br>Windows： <a href="https://nodejs.org/en/download/">点我下载</a><br>Linux：</p><figure class="highlight plain"><figcaption><span>nodejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure><p>安装完成之后，使用命令<code>node -v</code>,<code>npm -v</code>来检查是否成功安装<br><img src="https://img.imgdb.cn/item/605844dd8322e6675c746ccd.png"><br>这里可以直接使用<code>git bash</code>执行命令</p><h3 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h3><p><code>nodejs</code>和<code>git</code>环境安装完成之后，就可以正式开始Hexo的安装了<br>为Hexo选择一个文件夹（也可以新建一个文件夹，我是直接新建了一个blog文件夹），在这个文件夹下<code>git bash</code><br>执行命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>完成之后依旧用<code>hexo -v</code>查看一下版本<br>接下来在刚刚打开的git窗口中初始化Hexo，执行命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog</span><br></pre></td></tr></table></figure><p>这里的myblog是我定义的文件夹名，也就是Hexo会初始化在这个文件夹中<br>继续执行命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd myblog &#x2F;&#x2F;进入这个myblog文件夹</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><p>新建完成后，指定文件夹目录下有以下几个文件</p><ul><li>node_modules: 依赖包</li><li>public：存放生成的页面</li><li>scaffolds：生成文章的一些模板</li><li>source：用来存放你的文章</li><li>themes：主题</li><li>** _config.yml: 博客的配置文件**</li></ul><p>执行以下命令，就可以运行blog啦</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g &#x2F;&#x2F;generate</span><br><span class="line">hexo s &#x2F;&#x2F;server</span><br></pre></td></tr></table></figure><p>打开浏览器输入<strong>localhost:4000</strong>就可以看到你的博客。</p><h3 id="4-将Hexo部署到GitHub"><a href="#4-将Hexo部署到GitHub" class="headerlink" title="4.将Hexo部署到GitHub"></a>4.将Hexo部署到GitHub</h3><h4 id="GitHub创建个人仓库"><a href="#GitHub创建个人仓库" class="headerlink" title="GitHub创建个人仓库"></a>GitHub创建个人仓库</h4><p>首先，你先要有一个<a href="https://github.com/">GitHub</a>账户，去注册一个吧。</p><p>注册完登录后，点进右上角<code>settings</code>中，有一个<code>repositories</code>，点击它,然后点击<code>creat one</code></p><p><img src="https://img.imgdb.cn/item/6058491d8322e6675c771a18.png"></p><p><code>.github.io</code>前面的名字一定要和你的用户名一样，不然后面要部署到<code>GitHub page</code>的时候就会出错，其他的不用点<br>点击<code>create repository</code><br><img src="https://img.imgdb.cn/item/60584a268322e6675c779d40.png"></p><h4 id="生成SSH添加到GitHub"><a href="#生成SSH添加到GitHub" class="headerlink" title="生成SSH添加到GitHub"></a>生成SSH添加到GitHub</h4><p>回到 <code>git bash</code>中</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot; &#x2F;&#x2F;yourname是你的Github的用户名</span><br><span class="line">git config --global user.email &quot;youremail&quot; &#x2F;&#x2F;youremail是你的Github的邮箱</span><br></pre></td></tr></table></figure><p>创建SSH，有选项的地方直接回车就完事</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure><p>最终生成的公钥和密钥保存在你电脑中的<code>.ssh</code>隐藏文件夹中，找不到可以百度</p><p>进入到文件夹，可以看到有俩东西<br><code>id_rsa</code>是你这台电脑的私钥<br><code>id_rsa.pub</code>是连接你这台电脑的公钥<br>把这个公钥放在<code>GitHub</code>上，这样当你链接<code>GitHub</code>自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到<code>GitHub</code>上。</p><p>在Github的<code>settings</code>中，找到<code>SSH keys</code>，选择<code>New SSH key</code><br><img src="https://img.imgdb.cn/item/60584cb98322e6675c78ff1f.png"><br>点进去之后，title随便取，将<code>id_rsa.pub</code>里面的内容复制到Key下面的框中<br><img src="https://img.imgdb.cn/item/60584d008322e6675c791b37.png"></p><p>到这就差不多完成啦<br>使用命令查看是否配置完成，出现下图中的内容则表示成功连接了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p><img src="https://img.imgdb.cn/item/60584e028322e6675c79d496.png"></p><h4 id="将hexo部署到GitHub"><a href="#将hexo部署到GitHub" class="headerlink" title="将hexo部署到GitHub"></a>将hexo部署到GitHub</h4><p>前面的配置都完成之后，这是最后一步，让<code>Hexo</code>与<code>Github</code>关联起来，然后就可以访问我们部署在<code>Github</code>上的<code>Hexo</code>主页啦<br>在根目录中找到<code>_config.yml</code>，翻到最后，修改<code>YourgithubName</code>为你的<code>GitHub</code>账户</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p>然后安装<code>deploy-git</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>最后一步，也是每次跟新文章都要进行的一步，俗称<strong>Hexo</strong>三连</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  &#x2F;&#x2F;清除了你之前生成的东西,即清除缓存</span><br><span class="line">hexo g  &#x2F;&#x2F;generate，顾名思义，生成静态文章</span><br><span class="line">hexo d  &#x2F;&#x2F;deploy，部署文章到Github</span><br></pre></td></tr></table></figure><p>国内服务器部署到<code>Github</code>可能会被墙，多试几次或者添加代理<br>怎么添加代理可以参考<a href="https://spoience.com/articles/git-npm-proxy.html">这篇文章</a>，仅供参考</p><p>至此，你的<code>Hexo</code>就成功部署到了<code>Github</code>上，访问<code>http://yourname.github.io</code>就可以看到你的博客啦</p><h3 id="5-Hexo的一些常见配置说明"><a href="#5-Hexo的一些常见配置说明" class="headerlink" title="5.Hexo的一些常见配置说明"></a>5.Hexo的一些常见配置说明</h3><p><code>_config.yml</code>配置文件说明，<a href="https://hexo.io/zh-cn/docs/configuration.html">点我</a><br>更换主题：<a href="https://hexo.io/zh-cn/docs/themes.html">传送门</a> 我用的是Jerry大佬写的butterfly，具体配置可以看<a href="https://butterfly.js.org/">Jerry的博客</a><br>Hexo可以使用MD进行对文章的编辑，MD语法可以参考<a href="https://www.jianshu.com/p/399e5a3c7cc5">MD语法入门</a></p><p><strong>学习记录，仅供参考~</strong></p>]]></content>
+    
+    
+    <summary type="html">Hexo博客搭建过程</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://shuaiqiyu.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://shuaiqiyu.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/03/15/hello-world/"/>
-    <id>http://example.com/2021/03/15/hello-world/</id>
+    <link href="https://shuaiqiyu.github.io/2021/03/15/hello-world/"/>
+    <id>https://shuaiqiyu.github.io/2021/03/15/hello-world/</id>
     <published>2021-03-15T06:22:09.277Z</published>
     <updated>2021-03-19T07:22:28.755Z</updated>
     
@@ -33,12 +54,12 @@
     
     
     
-    <category term="Hexo" scheme="http://example.com/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://shuaiqiyu.github.io/categories/Hexo/"/>
     
     
-    <category term="web" scheme="http://example.com/tags/web/"/>
+    <category term="web" scheme="https://shuaiqiyu.github.io/tags/web/"/>
     
-    <category term="tag" scheme="http://example.com/tags/tag/"/>
+    <category term="tag" scheme="https://shuaiqiyu.github.io/tags/tag/"/>
     
   </entry>
   
